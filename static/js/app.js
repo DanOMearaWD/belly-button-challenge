@@ -52,22 +52,55 @@ function buildCharts(sample) {
       marker: {
         size: sample_values,   // Size of bubbles based on sample_values
         color: otu_ids,        // Color of bubbles based on otu_ids
-        colorscale: 'Earth'    // Color scale for the bubbles
+        colorscale: 'Portland'    // Color scale for the bubbles
       }
     }
 
     // Create the layout for the chart
     let layout = {
-      title: 'Bacteria Cultures Per Sample',
-      xaxis: { title: 'OTU IDs' },
-      yaxis: { title: 'Number of Bacteria' }
+      title: {
+        text: `Bacteria Cultures Per Sample (${sample})`,
+        font: {
+          size: 24,
+          family: 'Arial, sans-serif'
+        }
+      },
+      xaxis: {
+        title: {
+          text: 'OTU IDs',
+          font: {
+            size: 16,
+            color: 'gray'
+          }
+        },
+        tickfont: {
+          size: 14,
+          color: 'gray'
+        }
+      },
+      yaxis: {
+        title: {
+          text: 'Number of Bacteria',
+          font: {
+            size: 16,
+            color: 'gray'
+          }
+        },
+        tickfont: {
+          size: 14,
+          color: 'gray'
+        }
+      }
     };
+
 
     // Combine trace into a data array
     let plot_data = [trace1];
 
+
+    let config = { responsive: true };
     // Render the Bubble Chart
-    Plotly.newPlot('bubble', plot_data, layout);
+    Plotly.newPlot('bubble', plot_data, layout, config);
 
     // For the Bar Chart, map the otu_ids to a list of strings for your yticks
     const yticks = otu_ids.map(id => `OTU ${id}`);
@@ -79,18 +112,53 @@ function buildCharts(sample) {
       text: otu_labels.slice(0, 10).reverse(),
       hoverinfo: "x+y+text",
       type: "bar",
-      orientation: "h"
+      orientation: "h",
+      marker: {
+        color: sample_values.slice(0, 10).reverse(),
+        colorscale: "Portland"
+      }
     };
 
     let data_bar = [trace1_bar];
 
     let layout_bar = {
-      title: 'Top 10 Bacteria Cultures Found',
-      xaxis: { title: "Number of Bacteria" }
-    }
+      title: {
+        text: `Top 10 Bacteria Cultures Found in Sample ${sample}`,
+        font: {
+          size: 24,
+          family: 'Arial, sans-serif'
+        }
+      },
+      xaxis: {
+        title: {
+          text: 'Number of Bacteria',
+          font: {
+            size: 16,
+            color: 'gray'
+          }
+        },
+        tickfont: {
+          size: 14,
+          color: 'gray'
+        }
+      },
+      yaxis: {
+        title: {
+          font: {
+            size: 16,
+            color: 'gray'
+          }
+        },
+        tickfont: {
+          size: 14,
+          color: 'gray'
+        }
+      }
+    };
+
 
     // Render the Bar Chart
-    Plotly.newPlot("bar", data_bar, layout_bar);
+    Plotly.newPlot("bar", data_bar, layout_bar, config);
   });
 }
 
