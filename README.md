@@ -1,67 +1,75 @@
-# Belly Button Biodiversity Dashboard
+# Belly Button Biodiversity Dashboard 🌿  
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)  
+![Version](https://img.shields.io/badge/version-1.0.0-blue)  
+![Stars](https://img.shields.io/github/stars/danomearawd/belly-button-challenge)  
 
-## Background
-In this assignment, I built an interactive dashboard to explore the [**Belly Button Biodiversity**](https://robdunnlab.com/projects/belly-button-biodiversity/) dataset, which catalogs the microbes that colonize human navels. The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs) were present in more than 70% of people, while the rest were relatively rare.
+Explore the fascinating world of human microbiomes with an interactive dashboard built to visualize the [Belly Button Biodiversity](https://robdunnlab.com/projects/belly-button-biodiversity/) dataset. This project showcases the microbial species living in human navels, with an emphasis on their distribution and diversity.
 
-## Project Objective
-The goal of this project was to create an interactive web dashboard that displays the following information:
-- A **bar chart** showing the top 10 OTUs found in a sample.
-- A **bubble chart** displaying the distribution of samples across different OTUs.
-- A **metadata panel** displaying an individual’s demographic information.
-- The ability to update all charts and metadata when a new sample is selected from a dropdown menu.
+## 🌐 GitHub Page  
+[**Belly Button Biodiversity Dashboard**](https://danomearawd.github.io/belly-button-challenge/) <br />
+You can view the deployed app above:
 
----
+![Screenshot](screenshot.png)
 
-## Files
+## 🚀 Features
 
-The following files were provided to help get started:
+- **Bar Chart**: Displays the top 10 most abundant OTUs (Operational Taxonomic Units) found in an individual’s sample.
+- **Bubble Chart**: Visualizes the distribution of samples across different OTUs, with interactive size and color scales.
+- **Metadata Panel**: Shows the demographic information for each selected sample.
+- **Interactive Dropdown**: Allows users to select a new sample and updates all charts and metadata accordingly.
 
-- `index.html` - The HTML structure for the dashboard.
-- `samples.json` - Contains the sample data for the OTUs and metadata.
-- `static/js/app.js` - Contains the JavaScript code for the dashboard.
+## 📂 Project Structure
 
----
+```plaintext
+belly-button-challenge/
+├── index.html            # HTML structure for the dashboard
+├── samples.json          # Data containing sample and metadata
+├── static/
+│   └── js/
+│       └── app.js        # JavaScript code for dashboard logic
+```
 
-## Summary of Operations
+## 📝 Summary of Operations
 
-### 1. **Bar Chart**
-- Created a **horizontal bar chart** that displays the top 10 OTUs found in an individual sample.
-- Used `sample_values` as the **bar chart values**.
-- Used `otu_ids` as the **bar chart labels**.
-- Used `otu_labels` as the **hover text**.
+### Bar Chart:
+- Displays the top 10 OTUs in a horizontal bar chart, sorted by abundance.
+- Uses `sample_values` for the chart values, `otu_ids` for the labels, and `otu_labels` for hover text.
 
-### 2. **Bubble Chart**
-- Created a **bubble chart** that displays each sample.
-- Used `otu_ids` for the **x values**.
-- Used `sample_values` for the **y values**.
-- Used `sample_values` for the **marker size**.
-- Used `otu_ids` for the **marker colors**.
-- Used `otu_labels` for the **text values**.
+### Bubble Chart:
+- Displays the distribution of OTUs across all samples.
+- Uses `otu_ids` for the x-axis, `sample_values` for the y-axis, and adjusts marker size and color based on the sample values and OTU IDs.
 
-### 3. **Metadata Panel**
-- Displayed the sample's metadata, such as an individual's demographic information.
-- Looped through each key-value pair from the `metadata` object and created a text string.
-- Appended this information to the `#sample-metadata` panel.
+### Metadata Panel:
+- Fetches and displays demographic details (age, gender, ethnicity, etc.) for the selected sample.
+- Loops through the metadata object to display each key-value pair in the panel.
 
-### 4. **Update All Plots**
-- Updated all the plots (Bar and Bubble charts) and the metadata panel when a new sample is selected from the dropdown menu.
+### Dropdown Menu:
+- Users can select a new sample, which triggers updates to the bar chart, bubble chart, and metadata panel.
 
-### 5. **Deployment**
-- Deployed the dashboard to **GitHub Pages** to host the static page.
-- The link to the deployed app and GitHub repository can be found below.
+## 🛠️ Technologies Used
+- **JavaScript**: Implemented the interactive functionality and data handling.
+- **D3.js**: For data manipulation and creating the interactive bar and bubble charts.
+- **Plotly.js**: Used for generating the bubble chart with dynamic visualization features.
 
----
+## 🙋‍♂️ Author
 
-## GitHub Page
+**Dan O'Meara**  
+GitHub: [danomearawd](https://github.com/danomearawd)
 
-You can view the deployed app at the following link:
+## 💻 Installation
 
-[**Belly Button Biodiversity Dashboard**](https://danomearawd.github.io/belly-button-challenge/)
+To get started with this project locally:
 
----
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/danomearawd/belly-button-challenge.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd belly-button-challenge
+   ```
+3. Open index.html in your browser to interact with the dashboard and explore the microbial data.
 
-## Technologies Used
-- **D3.js** for data manipulation and visualization.
-- **Plotly.js** for creating interactive charts.
-- **GitHub Pages** for hosting the static website.
-
+### Prerequisites:
+- Ensure you have a modern browser with JavaScript enabled.
+- An internet connection is required to fetch real-time microbial data.
