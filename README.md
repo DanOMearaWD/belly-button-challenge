@@ -48,6 +48,7 @@ belly-button-challenge/
 - Users can select a new sample, which triggers updates to the bar chart, bubble chart, and metadata panel.
 
 ## 🛠️ Technologies Used
+- **HTML/CSS**: Markup and styling to structure and design the webpage and map layout.
 - **JavaScript**: Implemented the interactive functionality and data handling.
 - **D3.js**: For data manipulation and creating the interactive bar and bubble charts.
 - **Plotly.js**: Used for generating the bubble chart with dynamic visualization features.
