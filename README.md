@@ -73,4 +73,3 @@ To get started with this project locally:
 
 ### Prerequisites:
 - Ensure you have a modern browser with JavaScript enabled.
-- An internet connection is required to fetch real-time microbial data.
