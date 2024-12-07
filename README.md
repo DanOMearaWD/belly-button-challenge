@@ -23,6 +23,7 @@ belly-button-challenge/
 ├── static/
 │   └── js/
 │       └── app.js        # JavaScript code for dashboard logic
+
 ```
 
 ## 📝 Summary of Operations
@@ -49,7 +50,6 @@ belly-button-challenge/
 - **Plotly.js**: Used for generating the bubble chart with dynamic visualization features.
 
 ## 🙋‍♂️ Author
-
 **Dan O'Meara**  
 GitHub: [danomearawd](https://github.com/danomearawd)
 
