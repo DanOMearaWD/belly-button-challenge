@@ -1,4 +1,4 @@
-# Belly Button Biodiversity Dashboard 🌿  
+# Belly Button Biodiversity Dashboard 🔬
 Explore the fascinating world of human microbiomes with an interactive dashboard built to visualize the [Belly Button Biodiversity](https://robdunnlab.com/projects/belly-button-biodiversity/) dataset. This project showcases the microbial species living in human navels, with an emphasis on their distribution and diversity.
 
 ## 🌐 GitHub Page  
